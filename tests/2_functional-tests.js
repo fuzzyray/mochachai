@@ -62,8 +62,14 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
+Browser.site = 'https://mochachai.fuzzyray.repl.co';
 
 suite("Functional Tests with Zombie.js", function () {
+
+  const browser = new Browser();
+  suiteSetup(function (done) {
+    return browser.visit('/', done);
+  });
 
   suite('"Famous Italian Explorers" form', function () {
     // #5
