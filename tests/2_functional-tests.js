@@ -62,7 +62,7 @@ suite("Functional Tests", function () {
 });
 
 const Browser = require("zombie");
-Browser.site = 'https://mochachai.fuzzyray.repl.co';
+Browser.localhost('example.com', 3000);
 
 suite("Functional Tests with Zombie.js", function () {
 
